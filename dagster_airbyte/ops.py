@@ -1,7 +1,6 @@
 from typing import Any, Iterable, List, Optional
 
 from dagster import Config, In, Nothing, Out, Output, op
-from dagster._core.storage.tags import COMPUTE_KIND_TAG
 from pydantic import Field
 
 from dagster_airbyte.types import AirbyteOutput
@@ -61,7 +60,7 @@ class AirbyteSyncConfig(Config):
             " to see detailed information on this response."
         ),
     ),
-    tags={COMPUTE_KIND_TAG: "airbyte"},
+    tags={"kind": "airbyte"},
 )
 def airbyte_sync_op(
     context, config: AirbyteSyncConfig, airbyte: BaseAirbyteResource

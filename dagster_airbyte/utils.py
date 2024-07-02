@@ -10,7 +10,7 @@ def generate_table_schema(stream_schema_props: Mapping[str, Any]) -> TableSchema
     return TableSchema(
         columns=sorted(
             [
-                TableColumn(name=name, type=str(info))
+                TableColumn(name=name, type=str(info.get("type", "unknown")))
                 for name, info in stream_schema_props.items()
             ],
             key=lambda col: col.name,

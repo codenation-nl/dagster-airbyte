@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: dagster-airbyte
-Version: 0.23.12
+Version: 0.23.9
 Summary: Package for integrating Airbyte with Dagster.
 Home-page: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-airbyte
 Author: Dagster Labs
